@@ -1,6 +1,8 @@
-# AFLAD — Reproduction Package
+# ScoLAD — Reproduction Package
 
-Annotation-Free signal fusion for **Logical and structural Anomaly Detection** on MVTec LOCO AD.
+**Sco**re-**L**evel fusion for logical and structural **A**nomaly **D**etection on MVTec LOCO AD.
+
+Companion package for *ScoLAD: One Fused Score Detects Both Appearance Defects and Composition Errors in E-Commerce Fulfillment Inspection* (submitted to JTAER, special issue on AI-driven innovations in e-commerce). The setting is outbound (fulfillment) inspection of packed goods, where one fused score must flag both appearance defects and composition errors; numbers and claims are unchanged from the manuscript.
 
 This repository exists so that the numbers in the paper can be **recomputed**, not taken on
 trust. It ships the per-image anomaly scores that the reported results are built from.

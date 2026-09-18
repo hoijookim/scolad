@@ -79,7 +79,7 @@ for _, va in skf.split(train_idx, sub_labels):      # test 이미지 위 Stratif
 
 ### 먼저: 현 설정에서 비교한 실험이 레포에 없습니다
 
-찾아보신 `random +2.13pp` 가 DINOv2-B 시절이라 인용 불가라는 판단이 맞습니다. AFLAD 설정
+찾아보신 `random +2.13pp` 가 DINOv2-B 시절이라 인용 불가라는 판단이 맞습니다. ScoLAD 설정
 (DINOv3-L L17)에서 greedy 와 무작위를 비교한 산출물은 **없습니다.** 논문의
 *"무작위 표본은 구현이 단순하면서 본 설정에서 충분한 성능을 보였다"* 는 **뒷받침이 없는 상태**
 였습니다.

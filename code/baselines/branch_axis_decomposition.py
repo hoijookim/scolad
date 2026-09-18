@@ -15,7 +15,7 @@
   타이핑하면 사전등록이 깨진다.
 
 AUROC 는 순위 통계라 z-정규화가 결과를 바꾸지 않는다. 분기 점수를 그대로 쓴다.
-융합(AFLAD) 행은 논문 규칙대로 z(val 정상 통계) 합으로 만든다.
+융합(ScoLAD) 행은 논문 규칙대로 z(val 정상 통계) 합으로 만든다.
 """
 import json
 from collections import Counter
@@ -133,7 +133,7 @@ def main():
             f_t = z(e_t, e_v) + z(p_t, np.asarray(zp["val"], float)) + z(c_t, np.asarray(zsv["scores"], float))
 
             row = {}
-            for bname, s in (("EAD", e_t), ("PC", p_t), ("Comp", c_t), ("AFLAD", f_t)):
+            for bname, s in (("EAD", e_t), ("PC", p_t), ("Comp", c_t), ("ScoLAD", f_t)):
                 r = {"logical": auc(s, g, lp), "structural": auc(s, g, sp)}
                 for st, idx in by_strand.items():
                     if len(idx) >= MIN_N:
@@ -150,7 +150,7 @@ def main():
     def agg(vals):
         return {"mean": float(np.mean(vals)), "std": float(np.std(vals, ddof=1))}
 
-    branches = ["EAD", "PC", "Comp", "AFLAD"]
+    branches = ["EAD", "PC", "Comp", "ScoLAD"]
     keys = sorted({k for c in CATS for s in SEEDS for b in branches for k in per[c][s][b]})
     percat = {c: {b: {k: agg([per[c][s][b][k] for s in SEEDS])
                       for k in keys if all(k in per[c][s][b] for s in SEEDS)}
@@ -183,12 +183,12 @@ def main():
                                     else f"{'—':>13s}" for h in hdr))
     print("\n=== 범주별 (개수축 = cardinality strand)")
     print(f"  {'category':22s}{'EAD log':>9s}{'PC log':>9s}{'Comp log':>9s} | "
-          f"{'EAD card':>9s}{'PC card':>9s}{'Comp card':>10s}{'AFLAD card':>11s}")
+          f"{'EAD card':>9s}{'PC card':>9s}{'Comp card':>10s}{'ScoLAD card':>11s}")
     for c in CATS:
         d = percat[c]
         print(f"  {c:22s}" + "".join(f"{cell(d[b],'logical'):>9s}" for b in ("EAD", "PC", "Comp"))
               + " | " + "".join(f"{cell(d[b],'strand_cardinality'):>9s}" for b in ("EAD", "PC", "Comp"))
-              + f"{cell(d['AFLAD'],'strand_cardinality'):>11s}")
+              + f"{cell(d['ScoLAD'],'strand_cardinality'):>11s}")
     print(f"\n  [saved] {OUT}")
 
 

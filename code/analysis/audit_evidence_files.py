@@ -87,7 +87,7 @@ def main():
     # ── 3. 원고가 이름으로 부르는 산출물 ──────────────────────────────
     try:
         import docx
-        dx = sorted(R.glob("docs/AFLAD_MDPI_*full.docx"),
+        dx = sorted(R.glob("docs/ScoLAD_MDPI_*full.docx"),
                     key=lambda p: p.stat().st_mtime)[-1]
         txt = "\n".join(p.text for p in docx.Document(dx).paragraphs)
         named = {Path(m.group()).name for m in

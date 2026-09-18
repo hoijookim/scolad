@@ -90,10 +90,10 @@ v14(260704)~v30(260805) 및 MDPI 260812판까지 §3.1.2 에 있었다:
 
 | 판본 | 근거 문장 |
 |---|---|
-| `AFLAD_paper_v30.docx` (260805) | 있음 |
-| `AFLAD_MDPI_260808_s1_s3.docx` | 있음 |
-| `AFLAD_MDPI_260812_full.docx` | 있음 |
-| **`AFLAD_MDPI_260815_full.docx`** | **없음** |
+| `ScoLAD_paper_v30.docx` (260805) | 있음 |
+| `ScoLAD_MDPI_260808_s1_s3.docx` | 있음 |
+| `ScoLAD_MDPI_260812_full.docx` | 있음 |
+| **`ScoLAD_MDPI_260815_full.docx`** | **없음** |
 | 260817 · 260819 · 260821(정본) · 260822_ecomm | 없음 |
 
 **260815 주 설정 test-free 전환 커밋(`71ed106`) 구간에서 사라졌다.** 현행 정본 §3.1.2 는 서술만

@@ -17,7 +17,7 @@
       "metric": "pooled AUROC",
       "source": "reports/path_y/puad_5seed_allcats/puad_5seed_all_cats.json"
     },
-    "AFLAD_hc": {
+    "ScoLAD_hc": {
       "per_seed": {
         "42": 0.9818,
         "43": 0.98018,
@@ -28,7 +28,7 @@
       "n": 3,
       "source": "reports/countgd/fusion_hc_percat_perseed.json"
     },
-    "AFLAD_hc_CV": {
+    "ScoLAD_hc_CV": {
       "per_seed": {
         "42": 0.9818,
         "43": 0.9802,
@@ -39,7 +39,7 @@
       "n": 3,
       "source": "reports/countgd/ablation_psad_hc_vs_hcp.json"
     },
-    "AFLAD_hcp_CV": {
+    "ScoLAD_hcp_CV": {
       "per_seed": {
         "42": 0.98,
         "43": 0.9788,

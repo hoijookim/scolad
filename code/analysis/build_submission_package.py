@@ -89,6 +89,13 @@ CODE = {
         # analysis/layer_full_sweep.py 가 전 계층을 다시 인코딩한다(캐시에 3층뿐이라).
         "scripts/direction_I/I_dinov3_sl_cache.py",
     ],
+    # 요청 18-6: 부록 A 국소화(지도 생성·held-out sPRO·픽셀 AUROC). p15 가 p9 를 import 한다.
+    "localization": [
+        "scripts/salad_free/p9_spro_tuning.py",
+        "scripts/salad_free/p15_loco_hires.py",
+        "scripts/salad_free/p18_heldout_fullres.py",
+        "scripts/salad_free/p21_pixel_auroc.py",
+    ],
     "shared_modules": [
         "scripts/phase0/eval_loco_unified.py",      # L+S 지표 정의 자체
         "scripts/psad_rebuild/psad_scoring_search.py",

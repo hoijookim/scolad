@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """표 5 베이스라인을 시드 집합 {42,43,44} 로 재집계한다.
 
-배경: 논문 표 5 는 방법마다 시드 집합이 달랐다 (AFLAD 5-seed {42-46}, SALAD 3,
+배경: 논문 표 5 는 방법마다 시드 집합이 달랐다 (ScoLAD 5-seed {42-46}, SALAD 3,
 PUAD-S 1, EAD-M 3, ComAD 3 ...). 검수에서도 "test-free 변형만 구식 3시드"가 지적됐다.
 시드 집합을 {42,43,44} 로 통일한다.
 
@@ -77,7 +77,7 @@ def main():
         else:
             out["unavailable"]["PUAD"] = f"시드별 5범주 완비 실패 (확보 {sorted(ps)})"
 
-    # ---- AFLAD 주 설정 (42-46 -> 42/43/44) ----
+    # ---- ScoLAD 주 설정 (42-46 -> 42/43/44) ----
     f = R / "reports/countgd/fusion_hc_percat_perseed.json"
     if f.exists():
         d = json.load(open(f))
@@ -91,10 +91,10 @@ def main():
             if vals:
                 ps[sd] = float(np.mean(vals))
         if len(ps) == len(TARGET):
-            out["methods"]["AFLAD_hc"] = {"per_seed": ps, **agg(list(ps.values())),
+            out["methods"]["ScoLAD_hc"] = {"per_seed": ps, **agg(list(ps.values())),
                                           "source": str(f.relative_to(R))}
         else:
-            out["unavailable"]["AFLAD_hc"] = "per-seed 구조 파싱 실패 — 수동 확인 필요"
+            out["unavailable"]["ScoLAD_hc"] = "per-seed 구조 파싱 실패 — 수동 확인 필요"
 
     # ---- hc/hcp 절제 (42-46 보유) ----
     f = R / "reports/countgd/ablation_psad_hc_vs_hcp.json"
@@ -104,7 +104,7 @@ def main():
             fp = d.get(k, {}).get("fusion_per_seed", {})
             ps = {s: float(fp[str(s)]) for s in TARGET if str(s) in fp}
             if len(ps) == len(TARGET):
-                out["methods"][f"AFLAD_{k}_CV"] = {"per_seed": ps, **agg(list(ps.values())),
+                out["methods"][f"ScoLAD_{k}_CV"] = {"per_seed": ps, **agg(list(ps.values())),
                                                    "source": str(f.relative_to(R))}
 
     # ---- 재실행이 필요한 것 ----

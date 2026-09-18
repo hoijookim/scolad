@@ -31,7 +31,7 @@
       "paper_now": "300M"
     }
   },
-  "aflad_branches_sec4_5": {
+  "scolad_branches_sec4_5": {
     "reconstruction_detail": {
       "teacher": 2694144,
       "student": 4267392,

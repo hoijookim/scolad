@@ -8,9 +8,9 @@
 
 | 방법 | 구 표기 | **{42,43,44}** | 산출물 |
 |---|--:|--:|---|
-| AFLAD hc (구 주 설정, CV) | 0.9815 ± 0.0029 (5s) | **0.9807 ± 0.0009** | `realign_3seed_42_43_44.json` |
-| AFLAD hcp (절제, CV) | 0.9796 ± 0.0023 (5s) | 0.9795 ± 0.0006 | 동일 |
-| **AFLAD test-free hc (신 주 설정)** | — | **0.9723 ± 0.0011** | `testfree_final_eadfix_3seed.json` |
+| ScoLAD hc (구 주 설정, CV) | 0.9815 ± 0.0029 (5s) | **0.9807 ± 0.0009** | `realign_3seed_42_43_44.json` |
+| ScoLAD hcp (절제, CV) | 0.9796 ± 0.0023 (5s) | 0.9795 ± 0.0006 | 동일 |
+| **ScoLAD test-free hc (신 주 설정)** | — | **0.9723 ± 0.0011** | `testfree_final_eadfix_3seed.json` |
 | SALAD | 0.9469 ± 0.0074 (3s) | **0.9469 ± 0.0074** (동일) | `realign_salad_3seed.json` |
 | PUAD-M | 0.9284 (3s) | **0.9284 ± 0.0042** | `realign_puad_3seed.json` |
 | EAD-S | 0.8966 ± 0.0027 (5s) | **0.8945 ± 0.0041** | `realign_eads_pc_3seed.json` |
@@ -27,7 +27,7 @@ test-free 주 설정은 SALAD 재현 대비 **+2.54pp**.
 
 | 방법 | 학습 주체 | 시드가 바꾸는 것 |
 |---|---|---|
-| AFLAD | 우리 | 전체 학습 (EAD·PSAD UNet·PC coreset) |
+| ScoLAD | 우리 | 전체 학습 (EAD·PSAD UNet·PC coreset) |
 | SALAD | **우리** (`path_X/salad_multiseed_train.sh`, 3시드 × 5범주 × 70k iter) | 전체 학습 |
 | PUAD-M | **우리** (시드별 EAD-M 학습 + 공식 PUAD Mahalanobis 적합) | 전체 학습 |
 | EAD-S / EAD-M | 우리 (공식 EfficientAD 코드) | 전체 학습. teacher 만 ImageNet 사전학습 — EfficientAD 규약 |
@@ -112,5 +112,5 @@ EAD-S 90.0. 그리고 PUAD-M(0.9284)이 **자기 기반 EAD-M 위에 올라간**
 | EAD-M 재집계 (imagenette 판) | `reports/countgd/realign_eadm_3seed.json` |
 | EAD-M (full ImageNet 판) + PUAD L+S | `reports/countgd/realign_puad_3seed.json` |
 | EAD-S / DINOv3-L PC | `reports/countgd/realign_eads_pc_3seed.json` |
-| AFLAD / ComAD | `reports/countgd/realign_3seed_42_43_44.json` |
+| ScoLAD / ComAD | `reports/countgd/realign_3seed_42_43_44.json` |
 | 재집계 스크립트 | `scripts/psad_rebuild/realign_{3seed,eads_pc,puad}.py` |

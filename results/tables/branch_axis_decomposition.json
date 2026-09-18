@@ -67,7 +67,7 @@
           "std": 0.01769954181393314
         }
       },
-      "AFLAD": {
+      "ScoLAD": {
         "logical": {
           "mean": 0.9934246791085912,
           "std": 0.01026779737577812
@@ -181,7 +181,7 @@
           "std": 0.005835841142758588
         }
       },
-      "AFLAD": {
+      "ScoLAD": {
         "logical": {
           "mean": 0.9626660673259414,
           "std": 0.001913456473328356
@@ -267,7 +267,7 @@
           "std": 0.01689005807714192
         }
       },
-      "AFLAD": {
+      "ScoLAD": {
         "logical": {
           "mean": 0.9866220735785953,
           "std": 0.002352808839416196
@@ -341,7 +341,7 @@
           "std": 0.01705199901107807
         }
       },
-      "AFLAD": {
+      "ScoLAD": {
         "logical": {
           "mean": 0.9621475010968847,
           "std": 0.0038521157764509163
@@ -463,7 +463,7 @@
           "std": 0.005658561748395112
         }
       },
-      "AFLAD": {
+      "ScoLAD": {
         "logical": {
           "mean": 0.9373897707231041,
           "std": 0.010411672247169887
@@ -626,7 +626,7 @@
         "std": 0.01167952262784735
       }
     },
-    "AFLAD": {
+    "ScoLAD": {
       "logical": {
         "mean": 0.9684500183666235,
         "std": 0.0024168488958393286
@@ -693,7 +693,7 @@
           "strand_quantity": 0.9975490196078431,
           "strand_cardinality": 0.9816571790006325
         },
-        "AFLAD": {
+        "ScoLAD": {
           "logical": 0.9815733522324592,
           "structural": 0.9563180827886709,
           "strand_presence": 0.9954567192730751,
@@ -723,7 +723,7 @@
           "strand_quantity": 1.0,
           "strand_cardinality": 0.9996837444655282
         },
-        "AFLAD": {
+        "ScoLAD": {
           "logical": 0.9990550437042287,
           "structural": 0.9528322440087146,
           "strand_presence": 0.9992826398852224,
@@ -753,7 +753,7 @@
           "strand_quantity": 0.9987745098039216,
           "strand_cardinality": 1.0
         },
-        "AFLAD": {
+        "ScoLAD": {
           "logical": 0.9996456413890857,
           "structural": 0.9611111111111111,
           "strand_presence": 1.0,
@@ -791,7 +791,7 @@
           "strand_config": 0.9893617021276596,
           "strand_relational": 0.6639264990328819
         },
-        "AFLAD": {
+        "ScoLAD": {
           "logical": 0.9641893916691638,
           "structural": 0.9900407424173834,
           "strand_presence": 0.9893617021276596,
@@ -829,7 +829,7 @@
           "strand_config": 0.9893617021276596,
           "strand_relational": 0.6112185686653772
         },
-        "AFLAD": {
+        "ScoLAD": {
           "logical": 0.9632903805813604,
           "structural": 0.9893617021276595,
           "strand_presence": 0.9922964049889949,
@@ -867,7 +867,7 @@
           "strand_config": 0.9893617021276596,
           "strand_relational": 0.5744680851063829
         },
-        "AFLAD": {
+        "ScoLAD": {
           "logical": 0.9605184297273,
           "structural": 0.9887958352195564,
           "strand_presence": 0.9893617021276596,
@@ -898,7 +898,7 @@
           "strand_cardinality": 0.9928617780661908,
           "strand_presence": 0.4397993311036789
         },
-        "AFLAD": {
+        "ScoLAD": {
           "logical": 0.9885332059245102,
           "structural": 0.9828234031132582,
           "strand_cardinality": 0.9928617780661908,
@@ -924,7 +924,7 @@
           "strand_cardinality": 0.9928617780661908,
           "strand_presence": 0.6042363433667781
         },
-        "AFLAD": {
+        "ScoLAD": {
           "logical": 0.9839942666029622,
           "structural": 0.9676149579531221,
           "strand_cardinality": 0.9928617780661908,
@@ -950,7 +950,7 @@
           "strand_cardinality": 0.9928617780661908,
           "strand_presence": 0.4186176142697882
         },
-        "AFLAD": {
+        "ScoLAD": {
           "logical": 0.9873387482083135,
           "structural": 0.9684201109321882,
           "strand_cardinality": 0.9926454683106208,
@@ -978,7 +978,7 @@
           "strand_quantity": 0.9972257250945775,
           "strand_cardinality": 0.9832650273224044
         },
-        "AFLAD": {
+        "ScoLAD": {
           "logical": 0.9612301064975469,
           "structural": 0.9628148740503799,
           "strand_quantity": 0.9634300126103406,
@@ -1004,7 +1004,7 @@
           "strand_quantity": 0.9799495586380832,
           "strand_cardinality": 0.9931693989071038
         },
-        "AFLAD": {
+        "ScoLAD": {
           "logical": 0.9663754935981812,
           "structural": 0.9697121151539384,
           "strand_quantity": 0.9423707440100882,
@@ -1030,7 +1030,7 @@
           "strand_quantity": 0.9933165195460278,
           "strand_cardinality": 0.9743852459016393
         },
-        "AFLAD": {
+        "ScoLAD": {
           "logical": 0.9588369031949264,
           "structural": 0.9661135545781687,
           "strand_quantity": 0.9653215636822194,
@@ -1070,7 +1070,7 @@
           "strand_quantity": 1.0,
           "strand_spatial": 0.8003361344537816
         },
-        "AFLAD": {
+        "ScoLAD": {
           "logical": 0.9354186118892002,
           "structural": 0.9981216015818092,
           "strand_damage": 1.0,
@@ -1112,7 +1112,7 @@
           "strand_quantity": 1.0,
           "strand_spatial": 0.8063865546218487
         },
-        "AFLAD": {
+        "ScoLAD": {
           "logical": 0.9281045751633987,
           "structural": 0.9931784478497282,
           "strand_damage": 1.0,
@@ -1154,7 +1154,7 @@
           "strand_quantity": 1.0,
           "strand_spatial": 0.8036974789915967
         },
-        "AFLAD": {
+        "ScoLAD": {
           "logical": 0.9486461251167133,
           "structural": 0.9951557093425606,
           "strand_damage": 1.0,

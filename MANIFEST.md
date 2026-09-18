@@ -4,7 +4,7 @@
 > **해시는 LF 줄바꿈 기준**이다. 저장소에 `.gitattributes`(`* text=auto eol=lf`)가
 > 있어 `core.autocrlf=true` 인 Windows clone 에서도 그대로 일치한다.
 
-총 410개 파일 · 8.4 MB · per-image 점수 245개
+총 414개 파일 · 8.5 MB · per-image 점수 245개
 
 각 행은 `패키지 경로 | 원본 저장소 경로 | 크기 | SHA-256(앞 16자리)` 이다.
 원본 저장소에서 같은 경로의 파일과 해시를 대조하면 출처를 확인할 수 있다.
@@ -14,15 +14,14 @@
 | `.gitattributes` | `submission_extra/.gitattributes` | 331 | `fff835880c53def7` |
 | `.gitignore` | `submission_extra/gitignore` | 146 | `efe7e1bf820f4f5a` |
 | `LICENSE` | `submission_extra/LICENSE` | 1,102 | `663d39d80cffdc52` |
+| `README.ko.md` | `docs/submission_README.md` | 13,815 | `dd46c5ce48f7d4d6` |
+| `README.md` | `submission_extra/README_en.md` | 12,722 | `8ae95bfdbeba6980` |
 | `THIRD_PARTY_NOTICES.md` | `—` | 750 | `2d1835fccc7bb299` |
-| `requirements-verify.txt` | `—` | 19 | `95000871ea7c39c6` |
-| `README.ko.md` | `docs/submission_README.md` | 13,469 | `216113dae8ed71cb` |
-| `README.md` | `submission_extra/README_en.md` | 12,303 | `175081a66c5f4a0d` |
-| `code/RETARGET.md` | `(빌드가 생성)` | 684 | `67b7d8d1e8257957` |
-| `code/analysis/audit_evidence_files.py` | `scripts/psad_rebuild/audit_evidence_files.py` | 5,582 | `b8dbf12c446bdc18` |
-| `code/analysis/audit_package_coverage.py` | `scripts/psad_rebuild/audit_package_coverage.py` | 4,706 | `919086f04eb6482a` |
+| `code/RETARGET.md` | `(빌드가 생성)` | 684 | `95d61b5eefd97e3a` |
+| `code/analysis/audit_evidence_files.py` | `scripts/psad_rebuild/audit_evidence_files.py` | 5,583 | `dd57030db04c2298` |
+| `code/analysis/audit_package_coverage.py` | `scripts/psad_rebuild/audit_package_coverage.py` | 4,707 | `52bed337c19beb7e` |
 | `code/analysis/audit_submission_package.py` | `scripts/audit_submission_package.py` | 7,800 | `e37ebd566bb22cd1` |
-| `code/analysis/build_submission_package.py` | `scripts/build_submission_package.py` | 23,443 | `da36b586b61a9f3d` |
+| `code/analysis/build_submission_package.py` | `scripts/build_submission_package.py` | 23,783 | `7dd3f4bdea01d81a` |
 | `code/analysis/comad_axis_perseed.py` | `scripts/psad_rebuild/comad_axis_perseed.py` | 6,162 | `a0716cccfc20d8d1` |
 | `code/analysis/deployment_operating_point.py` | `scripts/countgd/deployment_operating_point.py` | 9,998 | `0cdcf94933e56a54` |
 | `code/analysis/diagnose_rebuild_gap.py` | `scripts/psad_rebuild/diagnose_rebuild_gap.py` | 7,375 | `eec69029928db938` |
@@ -34,7 +33,7 @@
 | `code/analysis/psad_variance_decomp.py` | `scripts/psad_rebuild/psad_variance_decomp.py` | 10,112 | `2e94c6af101eec5e` |
 | `code/analysis/reproduce_from_package.py` | `scripts/psad_rebuild/reproduce_from_package.py` | 9,333 | `8bf28c49d297b720` |
 | `code/analysis/requirement_cost_curve.py` | `scripts/countgd/requirement_cost_curve.py` | 5,705 | `6094a59052be19f2` |
-| `code/analysis/subtype_branch_auroc.py` | `scripts/countgd/subtype_branch_auroc.py` | 8,532 | `36a209a8fe8726af` |
+| `code/analysis/subtype_branch_auroc.py` | `scripts/countgd/subtype_branch_auroc.py` | 8,533 | `82dca7ebf9690c8f` |
 | `code/analysis/testfree_supplements.py` | `scripts/psad_rebuild/testfree_supplements.py` | 7,949 | `18b22d12f52b7b04` |
 | `code/audit/audit_ead_repro.py` | `scripts/phase0/audit_ead_repro.py` | 9,309 | `e593420b74fde4b0` |
 | `code/audit/audit_inductive.py` | `scripts/psad_rebuild/audit_inductive.py` | 4,509 | `181e4fe806ae7176` |
@@ -47,17 +46,17 @@
 | `code/baselines/PY_ls_patchcore_family_5seed.py` | `scripts/path_Y/PY_ls_patchcore_family_5seed.py` | 6,047 | `2c18bc5aae21dd5a` |
 | `code/baselines/PY_real_puad_M_MULTISEED.py` | `scripts/path_Y/PY_real_puad_M_MULTISEED.py` | 13,393 | `72e01516d530a453` |
 | `code/baselines/PY_salad_multiseed_v2_FULL.py` | `scripts/path_Y/PY_salad_multiseed_v2_FULL.py` | 10,984 | `4375608843d7e7e9` |
-| `code/baselines/branch_axis_decomposition.py` | `scripts/psad_rebuild/branch_axis_decomposition.py` | 9,968 | `c15fec7e72fd84cd` |
+| `code/baselines/branch_axis_decomposition.py` | `scripts/psad_rebuild/branch_axis_decomposition.py` | 9,973 | `5e5429bf715b1e06` |
 | `code/baselines/composition_provenance_audit.py` | `scripts/psad_rebuild/composition_provenance_audit.py` | 9,199 | `79e43fec91a84918` |
 | `code/baselines/coreset_greedy_vs_random.py` | `scripts/psad_rebuild/coreset_greedy_vs_random.py` | 6,935 | `68b0cbf444ed9cbb` |
 | `code/baselines/emit_puad_s_realign.py` | `scripts/psad_rebuild/emit_puad_s_realign.py` | 2,171 | `faa69b98e7359e60` |
 | `code/baselines/homogeneous_ensemble_control.py` | `scripts/psad_rebuild/homogeneous_ensemble_control.py` | 9,250 | `46e3fff188390a94` |
 | `code/baselines/layer_choice_testfree_check.py` | `scripts/psad_rebuild/layer_choice_testfree_check.py` | 6,475 | `1ed071423071d87a` |
-| `code/baselines/measure_param_counts.py` | `scripts/psad_rebuild/measure_param_counts.py` | 3,649 | `c49bb755240a69d5` |
+| `code/baselines/measure_param_counts.py` | `scripts/psad_rebuild/measure_param_counts.py` | 3,652 | `9be73e8c7f918dc8` |
 | `code/baselines/pc_backbone_swap.py` | `scripts/psad_rebuild/pc_backbone_swap.py` | 7,373 | `edeba5cd3d93e040` |
 | `code/baselines/puad_s_3seed_rescore.py` | `scripts/psad_rebuild/puad_s_3seed_rescore.py` | 6,638 | `deb592d7b89b180c` |
 | `code/baselines/puad_s_provenance_audit.py` | `scripts/psad_rebuild/puad_s_provenance_audit.py` | 12,080 | `f9fa76bcf1ee4719` |
-| `code/baselines/realign_3seed.py` | `scripts/psad_rebuild/realign_3seed.py` | 5,900 | `4c1f6179a5759de7` |
+| `code/baselines/realign_3seed.py` | `scripts/psad_rebuild/realign_3seed.py` | 5,905 | `88866142a0e6569d` |
 | `code/baselines/realign_eadm_fullimagenet.py` | `scripts/psad_rebuild/realign_eadm_fullimagenet.py` | 4,255 | `6f950fe1bdb5e764` |
 | `code/baselines/realign_eads_pc.py` | `scripts/psad_rebuild/realign_eads_pc.py` | 2,206 | `8c0e00730b3f1410` |
 | `code/baselines/realign_puad.py` | `scripts/psad_rebuild/realign_puad.py` | 2,699 | `c4df5fe56b0cf1e0` |
@@ -80,6 +79,10 @@
 | `code/fusion/fuse_testfree_v2.py` | `scripts/psad_rebuild/fuse_testfree_v2.py` | 7,401 | `6c77e3b4cc74a983` |
 | `code/fusion/prereg_testfree.py` | `scripts/psad_rebuild/prereg_testfree.py` | 13,598 | `2d1df72d4e0c5d18` |
 | `code/fusion/val_znorm_fusion.py` | `scripts/countgd/val_znorm_fusion.py` | 2,964 | `ee981ea4954550d0` |
+| `code/localization/p15_loco_hires.py` | `scripts/salad_free/p15_loco_hires.py` | 4,098 | `c005fc8b50044524` |
+| `code/localization/p18_heldout_fullres.py` | `scripts/salad_free/p18_heldout_fullres.py` | 4,041 | `81bc23b1ae211106` |
+| `code/localization/p21_pixel_auroc.py` | `scripts/salad_free/p21_pixel_auroc.py` | 3,335 | `cafd1d87c2ec9280` |
+| `code/localization/p9_spro_tuning.py` | `scripts/salad_free/p9_spro_tuning.py` | 5,292 | `7692e981039659f6` |
 | `code/selection_criteria/criterion_appearance.py` | `scripts/psad_rebuild/criterion_appearance.py` | 7,294 | `ca8e648fbad6eadd` |
 | `code/selection_criteria/criterion_exact.py` | `scripts/psad_rebuild/criterion_exact.py` | 9,248 | `6941e17ac662df7f` |
 | `code/selection_criteria/criterion_v2.py` | `scripts/psad_rebuild/criterion_v2.py` | 4,404 | `da1c03b34a94e2f5` |
@@ -94,25 +97,26 @@
 | `code/selection_criteria/sweep_hsplit.py` | `scripts/psad_rebuild/sweep_hsplit.py` | 7,260 | `e3576be9b5659d32` |
 | `code/shared_modules/eval_loco_unified.py` | `scripts/phase0/eval_loco_unified.py` | 13,288 | `0eac88cb64bd1274` |
 | `code/shared_modules/psad_scoring_search.py` | `scripts/psad_rebuild/psad_scoring_search.py` | 7,566 | `78bf422dca58e7ab` |
-| `docs/260716_v25_numbers_canonical.md` | `docs/260716_v25_numbers_canonical.md` | 14,925 | `93185bf2f56a102e` |
-| `docs/260817_baseline_seed_audit.md` | `docs/260817_baseline_seed_audit.md` | 6,990 | `a576f2bfef8e6226` |
-| `docs/260817_testfree_hc_canonical.md` | `docs/260817_testfree_hc_canonical.md` | 17,628 | `b172d2092e5e66e8` |
-| `docs/260817_testfree_pending_requests.md` | `docs/260817_testfree_pending_requests.md` | 24,493 | `a3232b5ff4799389` |
+| `docs/260716_v25_numbers_canonical.md` | `docs/260716_v25_numbers_canonical.md` | 14,934 | `7ae1643ef3f49cb5` |
+| `docs/260817_baseline_seed_audit.md` | `docs/260817_baseline_seed_audit.md` | 6,995 | `9a1f45e7b483ee6f` |
+| `docs/260817_testfree_hc_canonical.md` | `docs/260817_testfree_hc_canonical.md` | 17,631 | `56b06a247a174aba` |
+| `docs/260817_testfree_pending_requests.md` | `docs/260817_testfree_pending_requests.md` | 24,495 | `5fb53c0173580f9c` |
 | `docs/260820_paper_corrections.md` | `docs/260820_paper_corrections.md` | 6,135 | `909b82fb5bde6b1a` |
 | `docs/260821_ad2_no_logical_labels.md` | `docs/260821_ad2_no_logical_labels.md` | 5,500 | `f2a77742321a2cd4` |
-| `docs/260821_axis_decomposition_results.md` | `docs/260821_axis_decomposition_results.md` | 19,566 | `acebfff997b482fc` |
+| `docs/260821_axis_decomposition_results.md` | `docs/260821_axis_decomposition_results.md` | 19,573 | `243c4a89f0866475` |
 | `docs/260821_param_counts.md` | `docs/260821_param_counts.md` | 3,913 | `d07c475ecdb69f56` |
-| `docs/260821_puad_s_3seed.md` | `docs/260821_puad_s_3seed.md` | 12,804 | `c3e4bf5f3bff2abc` |
+| `docs/260821_puad_s_3seed.md` | `docs/260821_puad_s_3seed.md` | 12,805 | `70c15c0ce0a9579c` |
 | `docs/260822_branch_swap_results.md` | `docs/260822_branch_swap_results.md` | 7,708 | `7802fa6fcd22e757` |
-| `docs/260822_combination_history.md` | `docs/260822_combination_history.md` | 6,133 | `bf6b55ffafadfac2` |
+| `docs/260822_combination_history.md` | `docs/260822_combination_history.md` | 6,134 | `1a71862f5d19690e` |
 | `docs/260822_composition_provenance_results.md` | `docs/260822_composition_provenance_results.md` | 11,328 | `b51a7cbbc3ccc254` |
-| `docs/260822_l17_basis_audit.md` | `docs/260822_l17_basis_audit.md` | 10,140 | `b6d261d18ef5cb8d` |
-| `docs/260822_l17_coreset_provenance_results.md` | `docs/260822_l17_coreset_provenance_results.md` | 8,268 | `55ae7964f864570a` |
+| `docs/260822_l17_basis_audit.md` | `docs/260822_l17_basis_audit.md` | 10,144 | `fd6a8ba35c66271f` |
+| `docs/260822_l17_coreset_provenance_results.md` | `docs/260822_l17_coreset_provenance_results.md` | 8,269 | `726f7f98edd992a9` |
 | `docs/260822_layer_full_sweep_result.md` | `docs/260822_layer_full_sweep_result.md` | 5,151 | `4539fdf5e124c48a` |
 | `docs/260822_layer_prereg_result.md` | `docs/260822_layer_prereg_result.md` | 4,538 | `e60893d83dc6b599` |
 | `docs/260822_layer_prereg_v2_result.md` | `docs/260822_layer_prereg_v2_result.md` | 5,030 | `08d5d808f3d1ae9c` |
 | `docs/260823_psad_3way_compare.md` | `docs/260823_psad_3way_compare.md` | 6,593 | `974a7163f81f220c` |
 | `docs/260823_psad_variance_decomp.md` | `docs/260823_psad_variance_decomp.md` | 6,712 | `516b5ec8c1e5bb55` |
+| `requirements-verify.txt` | `—` | 19 | `95000871ea7c39c6` |
 | `results/diagnostics/PREREG_branch_improvement.md` | `reports/countgd/PREREG_branch_improvement.md` | 35,332 | `031e6011cb2f03c9` |
 | `results/diagnostics/PREREG_layer_full_sweep_260822.md` | `reports/countgd/PREREG_layer_full_sweep_260822.md` | 4,964 | `12aaada3879bed09` |
 | `results/diagnostics/PREREG_layer_selection_260822.md` | `reports/countgd/PREREG_layer_selection_260822.md` | 6,696 | `fb0566a200bb00fc` |
@@ -382,7 +386,7 @@
 | `results/reproduction/ead_5seed_verdict.json` | `reports/phase0/repro_audit/ead_5seed_verdict.json` | 953 | `e572c9011081c40d` |
 | `results/reproduction/puad_s_provenance_audit.json` | `reports/countgd/puad_s_provenance_audit.json` | 8,117 | `8f002c327122353a` |
 | `results/reproduction/splicing_outlier_audit.json` | `reports/phase0/repro_audit/splicing_outlier_audit.json` | 366 | `a4a7a37e0e569008` |
-| `results/tables/branch_axis_decomposition.json` | `reports/countgd/branch_axis_decomposition.json` | 36,436 | `353c8a51fb897989` |
+| `results/tables/branch_axis_decomposition.json` | `reports/countgd/branch_axis_decomposition.json` | 36,457 | `5dd6b25cf8a28afc` |
 | `results/tables/comad_axis_perseed.json` | `reports/countgd/comad_axis_perseed.json` | 5,232 | `30fc865ba00b8b9a` |
 | `results/tables/composition_provenance_audit.json` | `reports/countgd/composition_provenance_audit.json` | 8,776 | `ac2f5c4c87170aa9` |
 | `results/tables/coreset_greedy_vs_random.json` | `reports/countgd/coreset_greedy_vs_random.json` | 2,474 | `050d1f70b51fec45` |
@@ -403,13 +407,13 @@
 | `results/tables/p21_pixel_auroc.json` | `reports/salad_free/p21_pixel_auroc.json` | 1,395 | `388401f56f6384a5` |
 | `results/tables/p4_hybrid_baseline.json` | `reports/salad_free/p4_hybrid_baseline.json` | 227 | `e002eb7476a0c1fb` |
 | `results/tables/param_counts_inference.json` | `reports/countgd/param_counts_inference.json` | 4,210 | `5470881196393dc0` |
-| `results/tables/param_counts_measured.json` | `reports/countgd/param_counts_measured.json` | 1,489 | `df4e16f8371c6f95` |
+| `results/tables/param_counts_measured.json` | `reports/countgd/param_counts_measured.json` | 1,490 | `e836684c70716e5d` |
 | `results/tables/patchcore_family_trainonly_3seed.json` | `reports/countgd/patchcore_family_trainonly_3seed.json` | 2,722 | `5fb039784633b052` |
 | `results/tables/pc_backbone_swap.json` | `reports/countgd/pc_backbone_swap.json` | 3,391 | `b92360a17fb1065a` |
 | `results/tables/psad_3way_compare.json` | `reports/countgd/psad_3way_compare.json` | 6,195 | `ff3e85a3946fa2b9` |
 | `results/tables/psad_variance_decomp.json` | `reports/countgd/psad_variance_decomp.json` | 17,109 | `dcfedecae0da8ccf` |
 | `results/tables/puad_s_rescore_3seed.json` | `reports/countgd/puad_s_rescore_3seed.json` | 3,354 | `e37d3c49928ac7dc` |
-| `results/tables/realign_3seed_42_43_44.json` | `reports/countgd/realign_3seed_42_43_44.json` | 2,516 | `13f2a4f533e99e38` |
+| `results/tables/realign_3seed_42_43_44.json` | `reports/countgd/realign_3seed_42_43_44.json` | 2,519 | `4bf091f653e6387c` |
 | `results/tables/realign_eadm_fullimagenet_3seed.json` | `reports/countgd/realign_eadm_fullimagenet_3seed.json` | 784 | `c05eadd8b80d73d0` |
 | `results/tables/realign_eads_pc_3seed.json` | `reports/countgd/realign_eads_pc_3seed.json` | 1,197 | `741246647f568598` |
 | `results/tables/realign_puad_3seed.json` | `reports/countgd/realign_puad_3seed.json` | 1,209 | `5d1d33e3b5b0efc1` |
@@ -417,7 +421,7 @@
 | `results/tables/realign_salad_3seed.json` | `reports/countgd/realign_salad_3seed.json` | 525 | `d264141f194e1e50` |
 | `results/tables/requirement_cost_curve.json` | `reports/countgd/requirement_cost_curve.json` | 1,476 | `611f50440b341984` |
 | `results/tables/subtype_branch_auroc.json` | `reports/countgd/subtype_branch_auroc.json` | 57,342 | `394e822f222199f8` |
-| `results/tables/table5_3seed_42_43_44.json` | `reports/countgd/table5_3seed_42_43_44.json` | 8,538 | `d07048ca9ed57ae3` |
+| `results/tables/table5_3seed_42_43_44.json` | `reports/countgd/table5_3seed_42_43_44.json` | 8,544 | `19fbedd504f4bb0f` |
 | `results/tables/tableC1_full_grid.json` | `reports/countgd/tableC1_full_grid.json` | 34,251 | `212abe34f678763d` |
 | `results/tables/tableC2_true_cardinality.json` | `reports/countgd/tableC2_true_cardinality.json` | 4,054 | `8557c9d3feaad8ad` |
 | `results/tables/testfree_supplements_3seed.json` | `reports/countgd/testfree_supplements_3seed.json` | 4,240 | `b434a40dae134a47` |

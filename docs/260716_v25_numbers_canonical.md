@@ -1,4 +1,4 @@
-# [v25 수치 정본] AFLAD 논문 전 수치 단일 참조 — 표·산문·출처·변경이력
+# [v25 수치 정본] ScoLAD 논문 전 수치 단일 참조 — 표·산문·출처·변경이력
 
 > ## ⚠ 이 문서는 supersede 되었다 (2026-08-19)
 >
@@ -17,7 +17,7 @@
 > 이 문서를 남기는 이유는 무엇이 왜 바뀌었는지가 기록이기 때문이다.
 
 
-**작성일**: 2026-07-16 · **기준**: `260716_AFLAD_v25_word_source.md` (= `AFLAD_paper_v25.docx`, 219문단/표14/그림11)
+**작성일**: 2026-07-16 · **기준**: `260716_ScoLAD_v25_word_source.md` (= `ScoLAD_paper_v25.docx`, 219문단/표14/그림11)
 **용도**: v25에 들어가는 **모든 수치**를 표 번호 그대로 한 곳에 모은 단일 참조. 수치 갱신 시 이 문서와 v25 소스를 함께 갱신할 것.
 **주의**: 구 수치 문서(`260624_full_results_baselines_metrics.md`=hcp 0.9796 세대, `260630_all_tables_6to15.md`=구 표번호 세대)는 이 문서가 **supersede**.
 
@@ -80,8 +80,8 @@
 
 | Method | venue | L+S | logical | structural | n_seed | 출판값(참고) |
 |---|---|---|---|---|---|---|
-| **AFLAD (annotation-free, 주)** | — | **0.9815 ± 0.0029** | 0.9796 ± 0.0038 | 0.9833 ± 0.0020 | 5 | — |
-| AFLAD (human-annotation, 참고) | — | 0.9752 ± 0.0048 | 0.9715 ± 0.0094 | 0.9789 ± 0.0014 | 5 | — |
+| **ScoLAD (annotation-free, 주)** | — | **0.9815 ± 0.0029** | 0.9796 ± 0.0038 | 0.9833 ± 0.0020 | 5 | — |
+| ScoLAD (human-annotation, 참고) | — | 0.9752 ± 0.0048 | 0.9715 ± 0.0094 | 0.9789 ± 0.0014 | 5 | — |
 | SALAD | ICCV'25 | 0.9469 ± 0.0074 | 0.9497 | 0.9441 | 3 | 0.961 |
 | PUAD-M / -S | ICIP'24 | 0.9284 / 0.9276 | 0.9148 / 0.9100 | 0.9420 / 0.9453 | 3 / 1 | 0.931 |
 | EAD-S | WACV'24 | 0.8966 ± 0.0027 | 0.8554 | 0.9378 | 5 | 0.900 |
@@ -111,7 +111,7 @@ AUROC **0.9815±0.0029** · AUPR **0.9825±0.0032** · 최대 F1 **0.9602±0.005
 
 ## 8. 표 7 — 국소화 (§5.5, held-out)
 
-| 지표 | AFLAD | Hybrid baseline | Δ |
+| 지표 | ScoLAD | Hybrid baseline | Δ |
 |---|---|---|---|
 | AU-sPRO@0.05 | **0.5291** (val 0.5322) | 0.394 | +13.5pp |
 | pixel-AUROC (mean) | 0.755 | 0.646 | +10.9pp |
@@ -124,7 +124,7 @@ Hybrid baseline = DINOv2-B 지도 단독(자기 절제). 단일 시드·고정 �
 
 | Method | ms | FPS |
 |---|---|---|
-| **AFLAD** | **29** | **34** |
+| **ScoLAD** | **29** | **34** |
 | PUAD-S | 2.26 | 442 |
 | PaDiM | 2.38 | 419 |
 | EfficientAD-S | 3.45 | **290** |
@@ -194,7 +194,7 @@ box/text threshold: bfast 0.25/0.20 · juice 0.30/0.30 · pushpins 0.15/0.20 · 
 | v25 위치 | 소스 |
 |---|---|
 | 표 4 / B1 per-seed | `reports/countgd/naive_fusion_hc.json` (designed=헤드라인 bit-일치) |
-| 표 5 AFLAD 축별 | `reports/countgd/v4free_peraxis_table10.json` |
+| 표 5 ScoLAD 축별 | `reports/countgd/v4free_peraxis_table10.json` |
 | 표 5 baseline | `reports/path_y/metric_unify/ls_canonical_scores.json` + `reports/countgd/baseline_5seed_peraxis.json` (EAD-S/DINOv3-L 5-seed 통일) |
 | 표 6 per-cat / 그림 10 | `reports/countgd/percat_table_fill.json`(+`_anno`) · `fusion_hc_percat_perseed.json` |
 | 쌍별 융합·구성 단독 | `reports/countgd/hc_pairwise_standalone.json` (무결 검수 `audit_hc_pairwise.py` PASS) |
@@ -227,4 +227,4 @@ box/text threshold: bfast 0.25/0.20 · juice 0.30/0.30 · pushpins 0.15/0.20 · 
 | 파라미터/뱅크/VRAM | 미보고 | 4.8억 / 200MB / 1.7GB | v25 신규 실측 |
 
 ---
-*정합 검증: 표 4 designed·§5.4 AUROC·B1 평균 = 0.9815 상호 일치 · 표 6 평균 = 표 5 AFLAD 행 일치 · C1/C2 = 그림 1 캡션 "부록 C와 동일" 선언과 일치 · §4.1 산문(0.860→0.907, 0.485→0.725, 0.47–0.59) = C1/C2 표값 일치.*
+*정합 검증: 표 4 designed·§5.4 AUROC·B1 평균 = 0.9815 상호 일치 · 표 6 평균 = 표 5 ScoLAD 행 일치 · C1/C2 = 그림 1 캡션 "부록 C와 동일" 선언과 일치 · §4.1 산문(0.860→0.907, 0.485→0.725, 0.47–0.59) = C1/C2 표값 일치.*

@@ -84,7 +84,7 @@ def paper_numbers(docx_path):
 
 
 def main():
-    docx_path = sorted(R.glob("docs/AFLAD_MDPI_*full.docx"),
+    docx_path = sorted(R.glob("docs/ScoLAD_MDPI_*full.docx"),
                        key=lambda p: p.stat().st_mtime)[-1]
     print(f"원고: {docx_path.name}")
     vals, nf = pkg_values()

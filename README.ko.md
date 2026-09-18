@@ -1,6 +1,8 @@
-# AFLAD — 재현 패키지
+# ScoLAD — 재현 패키지
 
 MVTec LOCO AD 논리·구조 이상탐지. 논문에 실린 수치를 **직접 다시 계산해 확인할 수 있게** 만든
+
+논문 *ScoLAD: One Fused Score Detects Both Appearance Defects and Composition Errors in E-Commerce Fulfillment Inspection*(JTAER 특집호 투고)의 동반 패키지. 전자상거래 출고(풀필먼트) 검사에서 외관 결함과 구성 오류를 하나의 융합 점수로 잡는 설정이며, 수치·주장은 원고와 동일하다.
 패키지다. "우리 말을 믿어라"가 아니라 "돌려 보라"가 목적이다.
 
 **주 설정 — image-level AUROC (L+S) = 0.9723 ± 0.0011** (시드 42/43/44)

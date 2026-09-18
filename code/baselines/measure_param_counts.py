@@ -36,7 +36,7 @@ def main():
     for tag, hub in (("DINOv2-B/14", "dinov2_vitb14"), ("DINOv2-L/14", "dinov2_vitl14")):
         bb[tag] = count(torch.hub.load("facebookresearch/dinov2", hub, verbose=False))
 
-    # AFLAD 세 분기 (§4.5 의 482M 분해)
+    # ScoLAD 세 분기 (§4.5 의 482M 분해)
     cd = (REPO / "reports/phase0/efficient_ad_official_small_seeds_std"
           / "breakfast_box_seed44/trainings/mvtec_loco/breakfast_box")
     rec = {f.split("_")[0]: count(torch.load(cd / f, map_location="cpu", weights_only=False))
@@ -51,7 +51,7 @@ def main():
         "backbones_table_C1": {k: {"params": v, "M": round(v / 1e6, 2),
                                    "rounded_M": round(v / 1e6), "paper_now": PAPER[k]}
                                for k, v in bb.items()},
-        "aflad_branches_sec4_5": {
+        "scolad_branches_sec4_5": {
             "reconstruction_detail": rec, "composition_detail": comp,
             "per_branch": branches,
             "total": sum(branches.values()),
@@ -67,7 +67,7 @@ def main():
     for k, v in out["backbones_table_C1"].items():
         flag = "" if str(v["rounded_M"]) + "M" == v["paper_now"] else "   ← 표기 불일치"
         print(f"  {k:14s} {v['M']:>7.2f}M → {v['rounded_M']:>3d}M   논문 {v['paper_now']}{flag}")
-    print(f"\n  분기 합 {out['aflad_branches_sec4_5']['total_M']:.2f}M  (논문 약 482M)")
+    print(f"\n  분기 합 {out['scolad_branches_sec4_5']['total_M']:.2f}M  (논문 약 482M)")
     print(f"  [saved] {OUT}")
 
 
