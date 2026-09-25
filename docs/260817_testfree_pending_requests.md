@@ -130,7 +130,7 @@
 
 ---
 
-- **EAD-M 결함**: `efficient_ad_medium`(anomalib, imagenette 폴백) 0.7846 → `efficient_ad_official_medium`(공식 구현, full ImageNet) **0.8971** 로 교체. 출판 순서(EAD-M 90.7 > EAD-S 90.0)와 일치하게 복원됐고, PUAD-M 우위가 +14pp → **+3.1pp** 로 정직해졌다.
+- **EAD-M 결함**: `efficient_ad_medium`(anomalib, imagenette 폴백) 0.7846 → `efficient_ad_official_medium`(EfficientAD 공개 재구현 — nelson1425, 비공식, full ImageNet) **0.8971** 로 교체. 출판 순서(EAD-M 90.7 > EAD-S 90.0)와 일치하게 복원됐고, PUAD-M 우위가 +14pp → **+3.1pp** 로 정직해졌다.
 - **SALAD 시드 변동 없음 우려는 오판**: `path_X/salad_multiseed_train.sh` 로 3시드 × 5범주 × 70k iter 자체 학습. `n_seed 3` 표기가 옳다.
 - **§4.5 SALAD 재현 격차 서술 교정**: 기존 문장이 pooled 출판값 96.1% 에서 L+S 0.9469 를 빼 서로 다른 지표를 뺀 상태였다. 동일 지표(pooled) 재현치 95.13% 대비 −0.97%p 로 고치고, L+S 는 척도가 달라 직접 비교 불가임을 명시했다.
 

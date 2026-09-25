@@ -315,6 +315,9 @@ def main():
     # MANIFEST 의 README.md 해시가 한국어판 것이었고 README.en.md 는 유령 행이 됐다.
     put("submission_extra/README_en.md", "README.md")        # 공개 저장소 기본
     put("docs/submission_README.md", "README.ko.md")         # 한국어 원본 보존
+    # 260926 요청 ⑳: 수동 추가돼 재빌드마다 소실되던 두 파일을 소스에서 복사
+    put("submission_extra/THIRD_PARTY_NOTICES.md", "THIRD_PARTY_NOTICES.md")
+    put("submission_extra/requirements-verify.txt", "requirements-verify.txt")
     put("submission_extra/LICENSE", "LICENSE")
     put("submission_extra/.gitattributes", ".gitattributes")  # CRLF 로 해시가 깨지는 것을 막는다
     put("submission_extra/gitignore", ".gitignore")

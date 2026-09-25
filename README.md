@@ -73,9 +73,12 @@ Evidence: `results/tables/psad_variance_decomp.json`, `results/tables/psad_3way_
 ## Environment
 
 The verification in §1 needs only Python 3 with `numpy` and `scikit-learn` (`requirements-verify.txt`).
-The shipped scores were produced in a GPU container with PyTorch 2.11.0 (CUDA 12.8), timm 1.0.22 and
-OpenCV 4.13.0; the branch scripts under `code/` assume that environment plus the upstream
-implementations pinned in §8.
+The shipped scores were produced in a GPU container with a nightly build of PyTorch 2.11.0
+(2.11.0.dev20260203, CUDA 12.8), timm 1.0.22, OpenCV 4.13.0 and scikit-learn 1.8.0 under Python 3.12,
+on a single NVIDIA GeForce RTX 5090 GPU (32 GB); the branch scripts under `code/` assume that
+environment plus the upstream implementations pinned in §8. The container's scikit-learn (with NumPy
+2.4.2 → 2.5.3) was upgraded to 1.9.1 on 2026-09-13, after every shipped score had been produced; the
+§1 verification prints identical output under both versions.
 
 ---
 
@@ -216,8 +219,10 @@ they are listed in `THIRD_PARTY_NOTICES.md`.
 
 ## 8. Upstream implementations
 
-Two branches follow official implementations, and the composition branch uses
-CSAD's released pseudo-labels. Pinned commits:
+The reconstruction branch follows a public third-party reimplementation of EfficientAD (its README states
+that it is unofficial), the composition branch follows PSAD's public implementation, and the component
+pseudo-labels are those released in CSAD's official repository. Pinned commits (component names are
+local folder names):
 
 | Component | Repository | Commit |
 |---|---|---|

@@ -29,8 +29,8 @@ test-free 주 설정은 SALAD 재현 대비 **+2.54pp**.
 |---|---|---|
 | ScoLAD | 우리 | 전체 학습 (EAD·PSAD UNet·PC coreset) |
 | SALAD | **우리** (`path_X/salad_multiseed_train.sh`, 3시드 × 5범주 × 70k iter) | 전체 학습 |
-| PUAD-M | **우리** (시드별 EAD-M 학습 + 공식 PUAD Mahalanobis 적합) | 전체 학습 |
-| EAD-S / EAD-M | 우리 (공식 EfficientAD 코드) | 전체 학습. teacher 만 ImageNet 사전학습 — EfficientAD 규약 |
+| PUAD-M | **우리** (시드별 EAD-M 학습 + 공식 PUAD(LeapMind/PUAD, README 에 official 명시) Mahalanobis 적합) | 전체 학습 |
+| EAD-S / EAD-M | 우리 (EfficientAD 공개 재구현 — nelson1425, 비공식) | 전체 학습. teacher 만 ImageNet 사전학습 — EfficientAD 규약 |
 | DINOv3-L PC | 우리 | coreset 샘플링. 백본은 사전학습 DINOv3 — 설계상 그러함 |
 | ComAD | 우리 | 전체 |
 
@@ -64,7 +64,7 @@ EAD-M 학습이 **두 갈래로 존재하고 11pp 차이**가 난다. 둘 다 �
 | 경로 | 구현 | penalty 정칙화 데이터 | L+S | 용도 |
 |---|---|---|--:|---|
 | `reports/phase0/efficient_ad_medium` | anomalib | **imagenette 폴백** | **0.7846** | **표 5 의 EAD-M** |
-| `reports/phase0/efficient_ad_official_medium*` | 공식 EfficientAD | **full ImageNet** | **0.8971** | PUAD-M 의 기반 |
+| `reports/phase0/efficient_ad_official_medium*` | EfficientAD 공개 재구현(nelson1425, 비공식) | **full ImageNet** | **0.8971** | PUAD-M 의 기반 |
 
 EfficientAD 의 penalty 항은 ImageNet 이미지로 student 의 과잉 일반화를 막는다.
 imagenette(10클래스 소규모)로 대체하면 그 효과가 크게 약해진다 — SALAD breakfast_box 에서
