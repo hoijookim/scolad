@@ -145,29 +145,16 @@ File names keep their internal numbering; the paper's tables map to them as foll
 
 ---
 
-## 4. What "test-free" means here
+## 4. Data use and score calibration
 
-**No configuration was ever selected using the test split.** Decisions used two criteria only.
+Target-category training uses normal training images. The composition segmenter is
+supervised by component pseudo-labels for those images. Each branch score is standardized
+using the mean and standard deviation of the official normal-validation split, and the
+three standardized scores are summed with fixed weights (1, 1, 1).
 
-| Criterion | What it measures | Data |
-|---|---|---|
-| train discriminability | can the branch separate logical anomalies from normals | perturbations over train pseudo-labels + leave-one-out 1-NN AUROC |
-| val stability | does z-normalisation survive outliers | max \|z_robust\| of the validation-normal score tail |
-
-**The two can disagree.** A single validation-normal image that inflates the standard deviation
-shrinks that branch's test z-scores across the board, effectively switching it off. Two
-candidates were rejected for exactly this reason (k-NN with k=5; a cardinality distance).
-
-**The highest-scoring candidate was also rejected.** An h:c weighting (w_c = 0.25) gave the
-largest criterion improvement (+0.0150 mean), but because the criterion manipulates masks,
-the area term changes directly while the appearance term changes only indirectly — so the
-criterion **structurally underrates the appearance term**. A criterion cannot select on
-something it cannot measure. Of 11 candidates, 2 were adopted and 9 rejected; the record is
-in `results/diagnostics/PREREG_branch_improvement.md`.
-
-> **Easy to misread**: `code/selection_criteria/soft_areas.py` iterates over the test split.
-> That is *scoring*, not selection — that experiment (soft masks) was rejected on the
-> validation tail (pushpins 1.77 → 10.03). Test AUROC is used only for the single final report.
+Test labels are used to compute evaluation metrics. Train-pseudo-label perturbation
+comparisons and normal-validation stability checks are documented in
+`results/diagnostics/PREREG_branch_improvement.md` and the associated diagnostic results.
 
 ---
 
@@ -191,17 +178,15 @@ the corresponding column was removed from the paper).
 
 ---
 
-## 6. Paths
+## 6. Running the scripts
 
-Scripts are shipped **exactly as they ran**, so the repository root is hardcoded in most of
-them. Execution records were not edited after the fact. To retarget:
+The score-recalculation command in Section 1 reads the package directory specified by
+`--pkg`; it requires neither a GPU nor the original training workspace.
 
-```bash
-grep -rl /workspace/ai-vision-research . | xargs sed -i "s|/workspace/ai-vision-research|$PWD|g"
-```
-
-`code/analysis/reproduce_from_package.py` contains no absolute path and runs anywhere.
-Details in `code/RETARGET.md`.
+Training, feature-extraction and some analysis scripts retain paths and imports from the
+original research workspace. Running them requires configuring the dataset, checkpoint,
+cache and upstream-code locations for each script. Changing only the repository-root
+string does not recreate those dependencies. See [execution setup](code/RETARGET.md).
 
 ---
 

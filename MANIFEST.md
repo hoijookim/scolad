@@ -4,7 +4,7 @@
 > **해시는 LF 줄바꿈 기준**이다. 저장소에 `.gitattributes`(`* text=auto eol=lf`)가
 > 있어 `core.autocrlf=true` 인 Windows clone 에서도 그대로 일치한다.
 
-총 414개 파일 · 8.5 MB · per-image 점수 245개
+총 414개 파일 · 8.46 MB · per-image 점수 245개
 
 각 행은 `패키지 경로 | 원본 저장소 경로 | 크기 | SHA-256(앞 16자리)` 이다.
 원본 저장소에서 같은 경로의 파일과 해시를 대조하면 출처를 확인할 수 있다.
@@ -14,14 +14,14 @@
 | `.gitattributes` | `submission_extra/.gitattributes` | 331 | `fff835880c53def7` |
 | `.gitignore` | `submission_extra/gitignore` | 146 | `efe7e1bf820f4f5a` |
 | `LICENSE` | `submission_extra/LICENSE` | 1,102 | `663d39d80cffdc52` |
-| `README.ko.md` | `docs/submission_README.md` | 14,897 | `70d7eab25a831685` |
-| `README.md` | `submission_extra/README_en.md` | 13,259 | `dcb6910bfc32fb28` |
+| `README.ko.md` | `README sections 4/6 edit 2026-10-28; prior source: docs/submission_README.md` | 14,089 | `c35aa34b06ad0bdb` |
+| `README.md` | `README sections 4/6 edit 2026-10-28; prior source: submission_extra/README_en.md` | 12,483 | `89089c3714467cf9` |
 | `THIRD_PARTY_NOTICES.md` | `submission_extra/THIRD_PARTY_NOTICES.md` | 750 | `2d1835fccc7bb299` |
-| `code/RETARGET.md` | `(빌드가 생성)` | 684 | `95d61b5eefd97e3a` |
+| `code/RETARGET.md` | `README sections 4/6 edit 2026-10-28; prior source: (빌드가 생성)` | 1,221 | `94679d49cd3f3105` |
 | `code/analysis/audit_evidence_files.py` | `scripts/psad_rebuild/audit_evidence_files.py` | 5,583 | `dd57030db04c2298` |
 | `code/analysis/audit_package_coverage.py` | `scripts/psad_rebuild/audit_package_coverage.py` | 4,707 | `52bed337c19beb7e` |
 | `code/analysis/audit_submission_package.py` | `scripts/audit_submission_package.py` | 7,800 | `e37ebd566bb22cd1` |
-| `code/analysis/build_submission_package.py` | `scripts/build_submission_package.py` | 24,044 | `4a85d99e49cc541b` |
+| `code/analysis/build_submission_package.py` | `README sections 4/6 edit 2026-10-28; prior source: scripts/build_submission_package.py` | 24,376 | `1e8d81a27991d878` |
 | `code/analysis/comad_axis_perseed.py` | `scripts/psad_rebuild/comad_axis_perseed.py` | 6,162 | `a0716cccfc20d8d1` |
 | `code/analysis/deployment_operating_point.py` | `scripts/countgd/deployment_operating_point.py` | 9,998 | `0cdcf94933e56a54` |
 | `code/analysis/diagnose_rebuild_gap.py` | `scripts/psad_rebuild/diagnose_rebuild_gap.py` | 7,375 | `eec69029928db938` |
