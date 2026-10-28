@@ -76,7 +76,7 @@ The verification in §1 needs only Python 3 with `numpy` and `scikit-learn` (`re
 The shipped scores were produced in a GPU container with a nightly build of PyTorch 2.11.0
 (2.11.0.dev20260203, CUDA 12.8), timm 1.0.22, OpenCV 4.13.0 and scikit-learn 1.8.0 under Python 3.12,
 on a single NVIDIA GeForce RTX 5090 GPU (32 GB); the branch scripts under `code/` assume that
-environment plus the upstream implementations pinned in §8. The container's scikit-learn (with NumPy
+environment plus the upstream implementations pinned in §7. The container's scikit-learn (with NumPy
 2.4.2 → 2.5.3) was upgraded to 1.9.1 on 2026-09-13, after every shipped score had been produced; the
 §1 verification prints identical output under both versions.
 
@@ -145,20 +145,7 @@ File names keep their internal numbering; the paper's tables map to them as foll
 
 ---
 
-## 4. Data use and score calibration
-
-Target-category training uses normal training images. The composition segmenter is
-supervised by component pseudo-labels for those images. Each branch score is standardized
-using the mean and standard deviation of the official normal-validation split, and the
-three standardized scores are summed with fixed weights (1, 1, 1).
-
-Test labels are used to compute evaluation metrics. Train-pseudo-label perturbation
-comparisons and normal-validation stability checks are documented in
-`results/diagnostics/PREREG_branch_improvement.md` and the associated diagnostic results.
-
----
-
-## 5. What is not included, and why
+## 4. What is not included, and why
 
 | Item | Size | How to regenerate |
 |---|--:|---|
@@ -178,7 +165,7 @@ the corresponding column was removed from the paper).
 
 ---
 
-## 6. Running the scripts
+## 5. Running the scripts
 
 The score-recalculation command in Section 1 reads the package directory specified by
 `--pkg`; it requires neither a GPU nor the original training workspace.
@@ -190,7 +177,7 @@ string does not recreate those dependencies. See [execution setup](code/RETARGET
 
 ---
 
-## 7. Integrity
+## 6. Integrity
 
 `MANIFEST.md` lists every file with its origin path and SHA-256 prefix. `code/audit/` contains
 the scripts that built and checked this package, including a coverage audit that extracts every
@@ -202,7 +189,7 @@ MIT for our code and derived artifacts — see `LICENSE`. Third-party components
 weights, upstream implementations) remain under their own licenses and are not redistributed;
 they are listed in `THIRD_PARTY_NOTICES.md`.
 
-## 8. Upstream implementations
+## 7. Upstream implementations
 
 The reconstruction branch follows a public third-party reimplementation of EfficientAD (its README states
 that it is unofficial), the composition branch follows PSAD's public implementation, and the component

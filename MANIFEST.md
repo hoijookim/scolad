@@ -14,8 +14,8 @@
 | `.gitattributes` | `submission_extra/.gitattributes` | 331 | `fff835880c53def7` |
 | `.gitignore` | `submission_extra/gitignore` | 146 | `efe7e1bf820f4f5a` |
 | `LICENSE` | `submission_extra/LICENSE` | 1,102 | `663d39d80cffdc52` |
-| `README.ko.md` | `README sections 4/6 edit 2026-10-28; prior source: docs/submission_README.md` | 14,089 | `c35aa34b06ad0bdb` |
-| `README.md` | `README sections 4/6 edit 2026-10-28; prior source: submission_extra/README_en.md` | 12,483 | `89089c3714467cf9` |
+| `README.ko.md` | `README sections 4/6 edit 2026-10-28; prior source: docs/submission_README.md` | 13,529 | `2bddb74f3e753594` |
+| `README.md` | `README sections 4/6 edit 2026-10-28; prior source: submission_extra/README_en.md` | 11,868 | `922e742b8ef9276a` |
 | `THIRD_PARTY_NOTICES.md` | `submission_extra/THIRD_PARTY_NOTICES.md` | 750 | `2d1835fccc7bb299` |
 | `code/RETARGET.md` | `README sections 4/6 edit 2026-10-28; prior source: (빌드가 생성)` | 1,221 | `94679d49cd3f3105` |
 | `code/analysis/audit_evidence_files.py` | `scripts/psad_rebuild/audit_evidence_files.py` | 5,583 | `dd57030db04c2298` |
