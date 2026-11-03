@@ -1,0 +1,160 @@
+{
+  "table5": {
+    "Reconstruction alone": {
+      "80": {
+        "mean": 0.25,
+        "sample_sd": 0.025
+      },
+      "85": {
+        "mean": 0.305,
+        "sample_sd": 0.018
+      },
+      "90": {
+        "mean": 0.371,
+        "sample_sd": 0.019
+      },
+      "95": {
+        "mean": 0.501,
+        "sample_sd": 0.029
+      }
+    },
+    "Patch memory alone": {
+      "80": {
+        "mean": 0.589,
+        "sample_sd": 0.003
+      },
+      "85": {
+        "mean": 0.65,
+        "sample_sd": 0.002
+      },
+      "90": {
+        "mean": 0.733,
+        "sample_sd": 0.02
+      },
+      "95": {
+        "mean": 0.835,
+        "sample_sd": 0.021
+      }
+    },
+    "Composition alone": {
+      "80": {
+        "mean": 0.324,
+        "sample_sd": 0.031
+      },
+      "85": {
+        "mean": 0.41,
+        "sample_sd": 0.023
+      },
+      "90": {
+        "mean": 0.529,
+        "sample_sd": 0.029
+      },
+      "95": {
+        "mean": 0.689,
+        "sample_sd": 0.035
+      }
+    },
+    "R+P+C sum": {
+      "80": {
+        "mean": 0.026,
+        "sample_sd": 0.005
+      },
+      "85": {
+        "mean": 0.049,
+        "sample_sd": 0.004
+      },
+      "90": {
+        "mean": 0.116,
+        "sample_sd": 0.026
+      },
+      "95": {
+        "mean": 0.249,
+        "sample_sd": 0.03
+      }
+    },
+    "R+C sum": {
+      "80": {
+        "mean": 0.058,
+        "sample_sd": 0.013
+      },
+      "85": {
+        "mean": 0.111,
+        "sample_sd": 0.014
+      },
+      "90": {
+        "mean": 0.192,
+        "sample_sd": 0.022
+      },
+      "95": {
+        "mean": 0.32,
+        "sample_sd": 0.025
+      }
+    },
+    "R∨C OR": {
+      "80": {
+        "mean": 0.052,
+        "sample_sd": 0.002
+      },
+      "85": {
+        "mean": 0.093,
+        "sample_sd": 0.012
+      },
+      "90": {
+        "mean": 0.209,
+        "sample_sd": 0.026
+      },
+      "95": {
+        "mean": 0.323,
+        "sample_sd": 0.029
+      }
+    },
+    "R∨P∨C OR": {
+      "80": {
+        "mean": 0.018,
+        "sample_sd": 0.003
+      },
+      "85": {
+        "mean": 0.042,
+        "sample_sd": 0.005
+      },
+      "90": {
+        "mean": 0.095,
+        "sample_sd": 0.015
+      },
+      "95": {
+        "mean": 0.184,
+        "sample_sd": 0.026
+      }
+    }
+  },
+  "table6": {
+    "ScoLAD": {
+      "90": {
+        "mean": 11.57,
+        "sample_sd": 2.57
+      },
+      "95": {
+        "mean": 24.89,
+        "sample_sd": 3.02
+      },
+      "99": {
+        "mean": 63.62,
+        "sample_sd": 5.0
+      }
+    },
+    "SALAD": {
+      "90": {
+        "mean": 23.52,
+        "sample_sd": 3.09
+      },
+      "95": {
+        "mean": 34.34,
+        "sample_sd": 2.42
+      },
+      "99": {
+        "mean": 66.6,
+        "sample_sd": 3.3
+      }
+    }
+  }
+}
